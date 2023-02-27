@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="javas" href="">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  <script>
+  jQuery(document).ready(function() {
+    function count($this){
+      var current = parseInt($this.html(), 10);
+      current = current + 1; /* Where 1 is increment */
+  
+      $this.html(++current);
+      if(current > $this.data('count')){
+        $this.html($this.data('count'));
+      } else {
+        setTimeout(function(){count($this)}, 50);
+      }
+    }
+  
+    jQuery(".stat-count").each(function() {
+      jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
+      jQuery(this).html('0');
+      count(jQuery(this));
+    });
+  });</script>
+  <title>CIRCUNFERENCIA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+</head>
+<body class="bg-dark">
+
+  <nav class="navbar navbar-expand-lg bg-dark  navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./imagenes/Imagen1.png" id="nav-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#introduccion">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#tribute-data">Teoría</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#ejercicios">Conclusión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index2.html">Ir a Ejercicios</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Música
+            </a>
+            <ul class="dropdown-menu">
+              <!-- Content -->
+              <div class="container d-flex justify-content-center my-4 mb-5">
+                <div id="mobile-box">
+                  <!-- Card -->
+                  <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                      <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/2108/2108423.png"
+                        alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                    <div class="card-body text-center">
+
+                      <h5 class="h5 font-weight-bold"><a href="#" target="_blank">Piano Tenue</a></h5>
+                      <p class="mb-0">Música Rejalante</p>
+
+                      <audio id="music" preload="true">
+                        <source src="relajante1.mp3">controls
+                      </audio>
+                      <div id="audioplayer">
+                        <i id="pButton" class="fas fa-play"></i>
+                        <div id="timeline">
+                          <div id="playhead"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- Card -->
+                </div>
+              </div>
+              <audio src="relajante1.mp3" controls></audio>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="stat">
+    <span class="stat-count">0</span>
+    <p class="stat-detail">Visitantes</p>
+</div>  
+
+  <main class="container mt-5">
+    <section class="container-fluid my-5 d-flex flex-column align-items-center" id="introduccion">
+      <h1 class="text-center my-5">LA CIRCUNFERENCIA</h1> 
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vICf_JIwar4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <h2>Introducción.</h2>
+      
+      <p class="lead">Bienvenidos, la presente página web tiene como finalidad nada más que compartir los conocimientos adquiridos
+        sobre los temas de circunferencias y sus operaciones relativas a ellas, por el material facilitado por la institución y el
+        profesor. Se tratarán los conceptos de los temas mencionados y se verán también ejercicios resueltos para
+        facilitar su comprensión. Espero que se hayan satisfecho también en su totalidad los requerimientos académicos
+        impuestos para esta evaluación.</p>
+    </section>
+    <section id="tribute-data">
+      <h1 class="title-APJ">
+        Sobre la Circunferencia.
+      </h1>
+      <h2>¿Qué es la Circunferencia?</h2>
+      <p>De manera formal, una circunferencia se define como el lugar geométrico de los puntos del plano equidistantes de otro, llamado centro de la circunferencia.
+        No debemos nunca confundir el concepto de círculo con el concepto de circunferencia, que en realidad una 
+        circunferencia es la curva que encierra a un círculo (la circunferencia es una curva, el círculo una superficie).
+      </p>
+
+      <p> 
+        En realidad, y de manera más sencilla, una circunferencia es el conjunto de puntos situados en el plano todos a 
+        la misma distancia de un mismo punto central, al que llamaremos centro, y del que hablaremos más adelante con 
+        detalle en la parte de elementos básicos de la circunferencia.
+      </p>
+
+     <h2 class="title-APJ">Elementos básicos
+    </h2>
+      <img id ="centrar" src="imagenes/elementos-de-una-circunferencia.webp" class="img-fluid my-5" alt="Ilustración de las partes de una circunferencia">
+    <h3>
+      En la imagen expuesta arriba se pueden ver todos los elementos que vamos a nombrar a continuación:</h3>
+   <p>   <ul style="font-size:1.2em;">
+        <li> <b>Centro:</b> punto central que está a la misma distancia de todos los puntos pertenecientes a la circunferencia.</li>
+        <li> <b>Radio:</b> pedazo de recta que une el centro con cualquier punto perteneciente a la circunferencia.</li>
+        <li> <b>Cuerda:</b> pedazo de recta que une dos puntos cualquiera de una circunferencia.</li>
+        <li> <b>Diámetro:</b> mayor cuerda que une dos puntos de una circunferencia. Hay infinitos diámetros y todos pasan por el centro de la circunferencia.</li>
+        <li> <b>Recta secante:</b> recta que corta dos puntos cualesquiera de una circunferencia.</li>
+        <li> <b>Recta tangente:</b> recta que toca a la circunferencia en un solo punto y es perpendicular a un radio.</li>
+    </ul>
+  </p>
+      <br>
+      </div>
+
+      <iframe id="centrar" src="//www.slideshare.net/slideshow/embed_code/key/uRr1Gimltu01xs?startSlide=3" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/yezicp/la-circunferencia-62301303" title="La circunferencia" target="_blank">La circunferencia</a> </strong> de <strong><a href="//www.slideshare.net/yezicp" target="_blank">Yeselis Cantero</a></strong> </div>      <p>
+        Para más información, busque.  
+        <a id="tribute-link" href="https://es.wikipedia.org/wiki/Circunferencia"> 
+          <b>Circunferencias</b>
+        </a>
+        en Wikipedia.
+      </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/JPhCBE4x0bE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </section>
+    <section id="tribute-data"><h2 class="text-center my-5">Conclusión</h2><p>
+      Hemos desmenuzado el tema de la circunferencia y sus operaciones mediante la aplicación de 
+      la teoría facilitada, es importante que este sea provechoso ya que este mismo sienta las bases 
+      de muchos otros posteriores que no pueden llegarse a entender en su totalidad si previamente este no se es 
+      dominado. También 
+      hemos tenido la presencia de otros recursos como de ejercicios resueltos por ejemplo, o de vídeos 
+      explicativos de youtube que sin duda agilizan el 
+      aprendizaje si se combinan adecuadamente.</p></section>
+  </main>
+  <footer class="container-fluid d-flex justify-content-center mt-5 bg-dark pt-3">
+    <p> Hecho por @ <a href="#"> Andrés Osorio. C.I 30.919.870. Geometría Analítica, en la sección V-01</a></p>
+   
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
